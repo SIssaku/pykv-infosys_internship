@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PyKV Dashboard</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+  <div class="nav">
+    <div>
+      <h2>PyKV Dashboard</h2>
+      <p class="muted">Role: {{ role }}</p>
+    </div>
+
+    <div class="nav-links">
+      <a href="/stats-ui">Stats</a>
+      <a href="/logout">Logout</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- SET CARD -->
+    <div class="card">
+      <h3>SET Key</h3>
+      <div class="row">
+        <input id="key" placeholder="Key" />
+        <input id="value" placeholder="Value" />
+        <input id="ttl" placeholder="TTL (seconds optional)" />
+      </div>
+      <button onclick="setKey()">Save</button>
+    </div>
+
+    <!-- GET CARD -->
+    <div class="card">
+      <h3>GET Key</h3>
+      <div class="row">
+        <input id="getKey" placeholder="Enter key to fetch" />
+        <button onclick="getKey()">Fetch</button>
+      </div>
+      <pre id="getResult" class="output"></pre>
+    </div>
+
+    <!-- DELETE CARD -->
+    <div class="card">
+      <h3>DELETE Key</h3>
+      <div class="row">
+        <input id="delKey" placeholder="Enter key to delete" />
+        <button class="danger" onclick="deleteKey()">Delete</button>
+      </div>
+    </div>
+
+    <!-- SHOW ALL KEYS -->
+    <div class="card">
+      <div class="between">
+        <h3>Saved Keys</h3>
+        <div>
+          <button onclick="loadKeys()">Refresh</button>
+          <button class="danger" onclick="clearAll()">Clear All</button>
+        </div>
+      </div>
+
+      <p class="muted">To view values, click on any key.</p>
+
+      <ul id="keysList" class="keys-list"></ul>
+    </div>
+
+    <!-- STATUS MESSAGE -->
+    <p id="statusBox" class="status"></p>
+
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
