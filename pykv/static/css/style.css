@@ -1,0 +1,135 @@
+/* White theme UI */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
+}
+
+a {
+  color: #0066ff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.nav {
+  background: #f4f6f8;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-links a {
+  font-weight: 600;
+}
+
+.container {
+  width: 900px;
+  margin: 25px auto;
+}
+
+.box {
+  width: 340px;
+  margin: 90px auto;
+  background: #f9fafb;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.05);
+}
+
+.card {
+  background: #f9fafb;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 18px 0;
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.05);
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+button {
+  background: #0066ff;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.danger {
+  background: #e60023;
+}
+
+.output {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.muted {
+  color: #666;
+  font-size: 14px;
+}
+
+.keys-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.keys-list li {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 10px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.keys-list li:hover {
+  background: #eef5ff;
+}
+
+.status {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
