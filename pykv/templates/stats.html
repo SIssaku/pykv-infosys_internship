@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PyKV Stats</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  <div class="nav">
+    <div>
+      <h2>Stats Dashboard</h2>
+      <p class="muted">Monitoring Cache + WAL</p>
+    </div>
+    <a href="/">Back</a>
+  </div>
+
+  <div class="container">
+    <button onclick="loadStats()">Refresh Stats</button>
+    <pre id="statsBox" class="output"></pre>
+
+    <button onclick="compactWAL()">Compact WAL</button>
+  </div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

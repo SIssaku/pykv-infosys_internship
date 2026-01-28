@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PyKV Register</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+  <div class="box">
+    <h2>Register</h2>
+
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="post" action="/register">
+      <input name="username" type="email" placeholder="Email Address" required />
+      <input name="password" type="password" minlength="8" placeholder="Password (min 8 chars)" required />
+      <button type="submit">Register</button>
+    </form>
+
+    <p class="muted">Already user? <a href="/login">Login</a></p>
+  </div>
+</body>
+</html>
